@@ -1,0 +1,12 @@
+import json
+
+dict = open('dictionary/dictionary.json')
+dictdata = json.load(dict)
+
+
+lookingfor = 'OSTENTATIOUS'
+
+def returnDef(inputword):
+  for key, value in dictdata.items():
+    if key == inputword:
+      return key.encode('utf-8') + ": " + value.encode('utf-8')

@@ -1,0 +1,5 @@
+This application is an SMS Dictionary.
+
+Run the app (python app.py, in the app folder), and log in with your credentials.
+It assumes you have a google voice phone number already set up. 
+This phone number is what messages are sent to/received from.

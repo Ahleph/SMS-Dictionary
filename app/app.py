@@ -1,6 +1,6 @@
 from googlevoice import Voice
 from googlevoice.util import input
-import dict
+import dictmodule
 import parsesms
 import sys
 import BeautifulSoup
@@ -31,7 +31,7 @@ def extractsms(htmlsms) :
     return msgitems
     
 voice = Voice()
-voice.login('darksoldier53@gmail.com', '5736qrtpz35736qrtpz35736qrtpz3trollface0')
+voice.login()
 
 voice.sms()
 
@@ -65,7 +65,7 @@ def messageHandler():
     print str(msg['from'])
     if str(msg['from']) != "Me:":
       sendTo.append(str(msg['from']))
-      wordDef.append(dict.returnDef(msg['text'].upper()))
+      wordDef.append(dictmodule.returnDef(msg['text'].upper()))
   if len(wordDef) == 0:
     print ("Sorry, no new messages!")
   for i in range(len(wordDef)):
